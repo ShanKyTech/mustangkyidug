@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Mustang Kyidug USA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Contact Mustang Kyidug USA</h1>
+      <p>We Value Your Connection and Feedback</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="origin.html">History</a></li>
+        <li><a href="people.html">Community</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tourism.html">Tourism</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>Get in Touch</h2>
+      <p>
+        If you would like to learn more about Mustang Kyidug USA, participate in
+        our events, or discuss any aspect of our programs, please feel free to
+        contact us using the information provided below.
+      </p>
+
+      <h3>Email & Number</h3>
+      <p>
+        For general inquiries, please email us at:
+        <strong>mustangkyidug@gmail.com</strong>
+      </p>
+
+      <h3>Physical Address</h3>
+      <p>
+        Mustang Kyidug USA<br />
+        8212 Pettit Avenue<br />
+        New York, NY, United States
+      </p>
+
+      <h3>Contact Form</h3>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      © 2025 ShanKyTech | All Rights Reserved
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // JavaScript to handle the contact form submission
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+
+          // Display a thank you message or process the data here
+          alert(`Thank you, ${name}! Your message has been sent successfully.`);
+
+          // Reset the form fields
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

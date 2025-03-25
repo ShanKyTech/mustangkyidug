@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo & Video Gallery - Mustang Kyidug USA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Add styles for the video title hover effect */
+      .video-title {
+        color: #007bff; /* Set the text color */
+        text-decoration: none; /* Remove underline */
+      }
+
+      .video-title:hover {
+        color: #0056b3; /* Change color on hover */
+        text-decoration: underline; /* Add underline on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Photo & Video Gallery</h1>
+      <p>Celebrating Our Culture Through Visual Storytelling</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="origin.html">History</a></li>
+        <li><a href="people.html">Community</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tourism.html">Tourism</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>Gallery of Mustang Kyidug USA</h2>
+      <p>
+        The Photo and Video Gallery serves as a vibrant showcase of the rich
+        cultural heritage and community spirit of the Mustangi people. Through
+        stunning imagery and engaging videos, this gallery captures the essence
+        of Mustang.
+      </p>
+
+      <h3>Photo Gallery</h3>
+      <div class="scrolling-gallery" id="photoGallery"></div>
+      <br />
+      <br />
+
+      <h3>Video Documentaries</h3>
+      <div class="scrolling-gallery" id="videoGallery"></div>
+
+      <h3>Conclusion</h3>
+      <p>
+        The Photo and Video Gallery of Mustang Kyidug USA is a vibrant tribute
+        to the rich cultural heritage and enduring spirit of the Mustangi
+        people. We invite everyone to explore our gallery, share in our
+        experiences, and connect with the beautiful culture of Mustang.
+      </p>
+    </section>
+
+    <footer>© 2025 ShanKyTech | All Rights Reserved</footer>
+
+    <script src="script.js"></script>
+    <script>
+      // JavaScript to dynamically insert images and YouTube videos
+      const images = [
+        'images/mustang1.jpg',
+        'images/mustang2.jpg',
+        'images/mustang3.jpg',
+        'images/mustang4.jpg',
+        'images/mustang5.jpg',
+        'images/mustang6.jpg',
+        'images/mustang7.jpg',
+        'images/mustang8.jpg',
+        'images/mustang9.jpg',
+        'images/mustang10.jpg',
+        'images/mustang11.jpg',
+        'images/mustang12.jpg',
+        'images/mustang13.jpg',
+        'images/mustang14.jpg',
+        'images/mustang15.jpg',
+        'images/mustang16.jpg',
+        'images/mustang17.jpg',
+        'images/mustang18.jpg',
+        'images/mustang19.jpg',
+        'images/mustang20.jpg',
+        'images/mustang21.jpg',
+        'images/mustang22.jpg',
+        'images/mustang23.jpg',
+        'images/mustang24.jpg',
+        'images/mustang25.jpg',
+        'images/mustang26.jpg',
+        'images/mustang27.jpg', // 10 images total
+      ];
+
+      const videos = [
+        {
+          title: 'Chongu 2024',
+          url: 'https://www.youtube.com/watch?v=-_TeL6YlsUI',
+        },
+        {
+          title: 'Dhazang 2024',
+          url: 'https://www.youtube.com/watch?v=SdeFoYQa9sw',
+        },
+        {
+          title: 'Archery Tournament 2023',
+          url: 'https://www.youtube.com/watch?v=XFmcvrbASyU',
+        },
+        {
+          title: 'Kagbeni Dhazang 2022',
+          url: 'https://www.youtube.com/watch?v=kOIza3n8Je0',
+        },
+        {
+          title: 'Lhosar 2025',
+          url: 'https://www.youtube.com/watch?v=xM2go5NkA0A',
+        },
+        {
+          title: 'Chongu 2020',
+          url: 'https://www.youtube.com/watch?v=-L5sP5iQIj0',
+        },
+      ];
+
+      function loadGallery() {
+        const photoGallery = document.getElementById('photoGallery');
+        images.forEach((image) => {
+          const imgElement = document.createElement('img');
+          imgElement.src = image;
+          imgElement.alt = 'Mustang Image';
+          imgElement.onclick = () => openModal(image);
+          photoGallery.appendChild(imgElement);
+        });
+      }
+
+      function loadVideoGallery() {
+        const videoGallery = document.getElementById('videoGallery');
+        videos.forEach((video) => {
+          const videoContainer = document.createElement('div');
+
+          const titleElement = document.createElement('h4');
+          const linkElement = document.createElement('a');
+          linkElement.href = video.url; // Full YouTube link
+          linkElement.target = '_blank'; // Open in new tab
+          linkElement.textContent = video.title; // Set link text to the video title
+          linkElement.className = 'video-title'; // Add class for hover effect
+          titleElement.appendChild(linkElement);
+
+          const iframe = document.createElement('iframe');
+          iframe.src = video.url.replace('watch?v=', 'embed/'); // Embed URL for iframe
+          iframe.width = 320;
+          iframe.height = 180;
+          iframe.frameBorder = 0;
+          iframe.allow =
+            'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+
+          videoContainer.appendChild(titleElement);
+          videoContainer.appendChild(iframe);
+          videoGallery.appendChild(videoContainer);
+        });
+      }
+
+      function openModal(mediaSrc, isVideo = false) {
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.onclick = () => modal.remove();
+
+        if (isVideo) {
+          const iframe = document.createElement('iframe');
+          iframe.src = mediaSrc;
+          iframe.width = '100%'; // Full width
+          iframe.height = '100%'; // Full height
+          iframe.frameBorder = 0;
+          iframe.allowFullscreen = true;
+          modal.appendChild(iframe);
+        } else {
+          const img = document.createElement('img');
+          img.src = mediaSrc;
+          img.className = 'modal-content';
+          modal.appendChild(img);
+        }
+
+        const close = document.createElement('span');
+        close.className = 'close';
+        close.innerHTML = '&times;';
+        close.onclick = () => modal.remove();
+
+        modal.appendChild(close);
+        document.body.appendChild(modal);
+      }
+
+      // Load images and videos when the page loads
+      window.onload = () => {
+        loadGallery();
+        loadVideoGallery();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(235deg, #18a0b8, #bb9b0e); /* Blended gradient color */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header p {
+    color: rgb(199, 202, 206);
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+nav {
+    background-color: #4a54f1; /* Softer blue color */
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4 {
+    margin: 1rem 0;
+    color: #4a54f1; /* Softer blue color */
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+ul {
+    margin: 1rem 0;
+    padding-left: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #4a54f1; /* Softer blue color */
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    section {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Typography */
+h1 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+h2, h3, h4 {
+    font-family: 'Verdana', sans-serif;
+    font-weight: normal;
+}
+
+p, li {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #3498db;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #2980b9;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #3498db; /* Highlight border on focus */
+    outline: none;
+}
+
+/* Media Queries for Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between images */
+    justify-content: center; /* Center the images */
+}
+
+.gallery img {
+    width: calc(50% - 10px); /* Two images per row */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffcc00; /* Gold color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4a54f1; /* Softer blue color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Miscellaneous Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Additional Styles for Consistency */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+
+    nav, footer {
+        display: none; /* Hide navigation and footer in print */
+    }
+
+    section {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+/* Scrolling Gallery Styles */
+.scrolling-gallery {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px 0;
+    gap: 10px; /* Space between images/videos */
+}
+
+.scrolling-gallery img,
+.scrolling-gallery video {
+    height: 200px; /* Set a consistent height for images and videos */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.scrolling-gallery img:hover,
+.scrolling-gallery video:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffcc00; /* Gold color on hover */
+    text-decoration: none;
+}
+
+/* 1000+ lines of code */
