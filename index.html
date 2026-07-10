@@ -1,65 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustang Kyidug USA - Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustang Kyidug USA — Preserving Culture, Connecting Communities</title>
+  <meta name="description" content="Mustang Kyidug USA is a nonprofit founded in 2003 in New York City, uniting the Mustangi community in America and preserving the culture of Mustang, Nepal — the Kingdom of Lo.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to Mustang Kyidug USA</h1>
-        <p>Preserving Culture, Connecting Communities</p>
-    </header>
-
-    <nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgh" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#d99a2b"/><stop offset="1" stop-color="#b04a24"/>
+            </linearGradient>
+          </defs>
+          <circle cx="24" cy="24" r="23" fill="url(#lgh)"/>
+          <circle cx="32" cy="14" r="4.5" fill="#f8f4ec" opacity="0.95"/>
+          <path d="M4 36 L16 19 L22 27 L29 20 L44 36 Z" fill="#221a12" opacity="0.88"/>
+          <rect x="10" y="39" width="28" height="2.6" rx="1.3" fill="#f8f4ec" opacity="0.85"/>
+        </svg>
+        <span>Mustang Kyidug<small>USA &middot; Est. 2003</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="origin.html">History</a></li>
-            <li><a href="people.html">Community</a></li>
-            <li><a href="culture.html">Culture</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="tourism.html">Tourism</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="origin.html">History</a></li>
+          <li><a href="people.html">Community</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="tourism.html">Tourism</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-        <img src="images/mustang-main.jpg" alt="Mustang Landscape" class="hero-image">
-        <h2>About Us</h2>
-        <p>Mustang Kyidug USA is a nonprofit organization dedicated to preserving the rich culture of the Mustang community in Nepal. Our mission is to promote, protect, and preserve our unique traditions while supporting our local communities both in Nepal and abroad.</p>
-        <p>Established by passionate individuals, our organization serves as a bridge between generations, ensuring that our traditions, values, and identity remain strong, even as we integrate into modern society.</p>
-        <h3>Our Mission</h3>
-        <ul>
-            <li>To preserve and promote Mustangi culture, language, and traditions.</li>
-            <li>To support Mustangi individuals in the USA through education, networking, and community assistance.</li>
-            <li>To contribute to the development of Mustang, Nepal, through charitable initiatives, infrastructure projects, and education programs.</li>
-        </ul>
-
-        <h3>What We Do</h3>
-        <h4>Cultural Preservation & Events</h4>
-        <p>Mustang Kyidug USA organizes various cultural events, festivals, and educational programs to keep our heritage alive. From celebrating Tiji Festival to hosting traditional dance and music performances, we ensure that our customs continue to thrive.</p>
-
-        <h4>Community Support & Networking</h4>
-        <p>We assist Mustangi individuals and families in adjusting to life in the USA by offering resources, networking opportunities, and community gatherings. Whether it's helping newcomers settle in or connecting professionals within our community, we strive to create a strong support system.</p>
-
-        <h4>Development Initiatives for Mustang, Nepal</h4>
-        <p>We actively participate in social welfare programs in Mustang, supporting projects related to education, healthcare, and infrastructure development. Our goal is to give back to our homeland and improve the lives of those in the region.</p>
-
-        <h3>Join Us</h3>
-        <p>We welcome all members of the Mustangi community and those who share our love for this unique culture. Whether you want to participate in events, volunteer, or contribute to our projects, Mustang Kyidug USA provides various ways to get involved.</p>
-
-        <p>Stay connected with us and be a part of a growing movement that cherishes tradition while embracing the future!</p>
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image:url('images/mustang3.jpg')" role="img" aria-label="The green terraced fields of Kagbeni village beneath the peaks of the Kali Gandaki valley, Mustang, Nepal"></div>
+      <div class="wrap">
+        <p class="hero__eyebrow">Est. 2003 &middot; New York City</p>
+        <h1>
+          <span class="line"><span>From the</span></span>
+          <span class="line"><span><em>Kingdom of Lo</em></span></span>
+          <span class="line"><span>to America.</span></span>
+        </h1>
+        <p class="hero__sub">Mustang Kyidug USA unites the Mustangi community across the United States — preserving the language, festivals, and living traditions of Mustang, Nepal, and giving back to the homeland we carry with us.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="about.html">Discover our mission
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="events.html">Festivals &amp; events</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><b data-count="2003">0</b><span>Founded in NYC</span></div>
+          <div class="stat"><b><span data-count="20">0</span><sup>+</sup></b><span>Years of community</span></div>
+          <div class="stat"><b data-count="3">0</b><span>Signature festivals</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"></div>
     </section>
 
-    <footer>
-        © 2025 ShanKyTech | All Rights Reserved
-    </footer>
+    <div class="flag-strip" aria-hidden="true"></div>
 
-    <script src="script.js"></script>
+    <!-- ============ Who we are ============ -->
+    <section class="section">
+      <div class="wrap split">
+        <div class="split__media split__media--stamp reveal reveal--left">
+          <img src="images/mustang1.jpg" alt="Community members and monks in traditional dress playing drums and bells at a Mustang Kyidug ceremony beneath prayer flags">
+        </div>
+        <div class="reveal reveal--right">
+          <p class="eyebrow">Who we are</p>
+          <h2>A kyidug is a family away from home</h2>
+          <p>Mustang Kyidug USA is a nonprofit organization dedicated to preserving the rich culture of Mustang, Nepal — and to supporting every Mustangi family building a life in the United States. We are a bridge between generations, keeping our traditions, values, and identity strong as we grow in a new land.</p>
+          <ul class="checklist">
+            <li><b>Preserve &amp; promote</b> Mustangi culture, language, and traditions.</li>
+            <li><b>Support our people</b> in the USA through education, networking, and community assistance.</li>
+            <li><b>Give back to Mustang</b> through charitable initiatives, education, and infrastructure projects.</li>
+          </ul>
+          <a class="btn btn--dark" href="about.html">More about us
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Pillars ============ -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">What we do</p>
+          <h2>Three pillars, one purpose</h2>
+          <p class="lede">Everything we organize — from Losar celebrations in Queens to school projects in Lo Manthang — grows from these commitments.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="feature reveal" style="--d:0s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M12 3v3"/></svg>
+            </div>
+            <h3>Cultural preservation</h3>
+            <p>Annual celebrations of Losar, Tiji, and Chhongu, plus dance, music, and language programs that pass the heritage of the Kingdom of Lo to the next generation.</p>
+          </article>
+          <article class="feature reveal" style="--d:0.12s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Community support</h3>
+            <p>A support network for newcomers and families — guidance on settling in, education resources, professional networking, and gatherings that keep us connected.</p>
+          </article>
+          <article class="feature reveal" style="--d:0.24s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12c-2.5 4.4-9.5 9-9.5 9z"/></svg>
+            </div>
+            <h3>Homeland development</h3>
+            <p>Scholarships, healthcare aid, and infrastructure projects in Mustang, Nepal — so the villages we come from thrive alongside the community abroad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Quote band ============ -->
+    <section class="quote-band" style="background-image:url('images/mustang22.jpg')">
+      <div class="wrap reveal">
+        <blockquote>
+          &ldquo;Wherever we settle, Mustang lives in us — in our language, our prayers, and the way we gather.&rdquo;
+          <cite>Mustang Kyidug USA community</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ Festivals preview ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Celebrations</p>
+          <h2>Festivals that bring us together</h2>
+          <p class="lede">Each year our community gathers to celebrate the great festivals of Mustang — in New York and back home in Nepal.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal" style="--d:0s">
+            <div class="card__media">
+              <span class="card__tag">Tibetan New Year</span>
+              <img src="images/mustang12.jpg" alt="Colourful monastery prayer hall in Mustang decorated with ritual masks, banners and a great drum" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3>Losar</h3>
+              <p>Two weeks of renewal and reunion — prayer ceremonies, guthuk feasts, traditional dance, and new prayer flags to welcome the year.</p>
+              <a class="card__link" href="events.html">Explore Losar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="card reveal" style="--d:0.12s">
+            <div class="card__media">
+              <span class="card__tag">Lo Manthang</span>
+              <img src="images/mustang20.jpg" alt="The tall red-walled monastery of Lo Manthang glowing in morning light against a barren mountainside" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3>Tiji Festival</h3>
+              <p>Three days of masked dances in the walled city of Lo Manthang, retelling the victory of good over evil through the deity Dorje Jono.</p>
+              <a class="card__link" href="events.html">Explore Tiji
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="card reveal" style="--d:0.24s">
+            <div class="card__media">
+              <span class="card__tag">Community gathering</span>
+              <img src="images/mustang10.jpg" alt="Young monks in red robes standing in a monastery courtyard with a snow-capped Himalayan peak behind them" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3>Chhongu</h3>
+              <p>Our annual gathering of families and friends — performances, workshops for the young generation, and stories shared across tables.</p>
+              <a class="card__link" href="events.html">Explore Chhongu
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Filmstrip ============ -->
+    <section class="section section--tight section--alt">
+      <div class="wrap section-head section-head--center reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>Moments from Mustang &amp; our community</h2>
+      </div>
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee__track">
+          <img src="images/mustang2.jpg" alt="" loading="lazy">
+          <img src="images/mustang5.jpg" alt="" loading="lazy">
+          <img src="images/mustang7.jpg" alt="" loading="lazy">
+          <img src="images/mustang10.jpg" alt="" loading="lazy">
+          <img src="images/mustang15.jpg" alt="" loading="lazy">
+          <img src="images/mustang17.jpg" alt="" loading="lazy">
+          <img src="images/mustang20.jpg" alt="" loading="lazy">
+          <img src="images/mustang25.jpg" alt="" loading="lazy">
+          <img src="images/mustang27.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="wrap" style="text-align:center; margin-top:2.4rem">
+        <a class="btn btn--dark reveal" href="gallery.html">Visit the full gallery
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal reveal--zoom">
+          <div>
+            <h2>Become part of the story</h2>
+            <p>Whether you are from Mustang, second-generation Mustangi, or simply love Himalayan culture — there is a place for you here. Volunteer, attend, sponsor, or just say hello.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Get in touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="flag-strip" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgf" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d99a2b"/><stop offset="1" stop-color="#b04a24"/>
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="23" fill="url(#lgf)"/>
+            <circle cx="32" cy="14" r="4.5" fill="#f8f4ec" opacity="0.95"/>
+            <path d="M4 36 L16 19 L22 27 L29 20 L44 36 Z" fill="#221a12" opacity="0.88"/>
+            <rect x="10" y="39" width="28" height="2.6" rx="1.3" fill="#f8f4ec" opacity="0.85"/>
+          </svg>
+          <span>Mustang Kyidug<small>USA &middot; Est. 2003</small></span>
+        </a>
+        <p>Preserving the culture of the Kingdom of Lo and supporting the Mustangi community across the United States since 2003.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="origin.html">History &amp; origin</a></li>
+          <li><a href="people.html">Our community</a></li>
+          <li><a href="culture.html">Culture</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Experience</h4>
+        <ul>
+          <li><a href="events.html">Festivals &amp; events</a></li>
+          <li><a href="tourism.html">Visit Mustang</a></li>
+          <li><a href="gallery.html">Photo &amp; video gallery</a></li>
+          <li><a href="contact.html">Get involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:mustangkyidug@gmail.com">mustangkyidug@gmail.com</a></li>
+          <li>8212 Pettit Avenue<br>New York, NY, United States</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <span>&copy; <span data-year>2026</span> Mustang Kyidug USA. All rights reserved.</span>
+        <span>Site by ShanKyTech</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">&uarr;</button>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

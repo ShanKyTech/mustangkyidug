@@ -1,90 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festivals & Events - Mustang Kyidug USA</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivals &amp; Events — Mustang Kyidug USA</title>
+  <meta name="description" content="Losar, Tiji, Chhongu, Dhazang and more — the festivals and community events of Mustang Kyidug USA, and how to take part.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Festivals and Events in Mustang</h1>
-        <p>Celebrating Our Culture and Community</p>
-    </header>
-
-    <nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgh" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#d99a2b"/><stop offset="1" stop-color="#b04a24"/>
+            </linearGradient>
+          </defs>
+          <circle cx="24" cy="24" r="23" fill="url(#lgh)"/>
+          <circle cx="32" cy="14" r="4.5" fill="#f8f4ec" opacity="0.95"/>
+          <path d="M4 36 L16 19 L22 27 L29 20 L44 36 Z" fill="#221a12" opacity="0.88"/>
+          <rect x="10" y="39" width="28" height="2.6" rx="1.3" fill="#f8f4ec" opacity="0.85"/>
+        </svg>
+        <span>Mustang Kyidug<small>USA &middot; Est. 2003</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="origin.html">History</a></li>
-            <li><a href="people.html">Community</a></li>
-            <li><a href="culture.html">Culture</a></li>
-            <li><a href="tourism.html">Tourism</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="origin.html">History</a></li>
+          <li><a href="people.html">Community</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="tourism.html">Tourism</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-        <h2>Festivals and Events in Mustang</h2>
-        <p>The festivals and events celebrated by the people of Mustang are vibrant expressions of their rich cultural heritage and spiritual beliefs. These celebrations play a crucial role in bringing the community together, reinforcing their identity, and preserving their unique traditions. Mustang Kyidug USA actively participates in organizing and promoting these events, ensuring that the spirit of Mustang is alive and thriving, even among those living abroad.</p>
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('images/mustang1.jpg')" role="img" aria-label="Monks and community members playing drums and bells at a festival gathering beneath colourful prayer flags"></div>
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">Home</a><span>Events</span></p>
+        <h1>Festivals &amp; events</h1>
+        <p>Vibrant expressions of our heritage and faith — celebrated in Mustang for centuries, and now in America too.</p>
+      </div>
+    </section>
+    <div class="flag-strip" aria-hidden="true"></div>
 
-        <h3>1. Losar: The Tibetan New Year</h3>
-        <p>Losar is the most significant festival celebrated by the people of Mustang. This vibrant celebration marks the Tibetan New Year and is a time for renewal, joy, and family reunions. Traditionally, Losar lasts for about two weeks and includes a variety of rituals, feasts, and cultural activities.</p>
-        <h4>Celebration Activities</h4>
-        <ul>
-            <li><strong>Preparations:</strong> Families clean their homes, prepare special foods, and set up prayer flags to welcome the new year.</li>
-            <li><strong>Rituals:</strong> The festival begins with religious ceremonies, including offerings made at monasteries and homes, prayers, and rituals to drive away negative energy.</li>
-            <li><strong>Culinary Delights:</strong> Traditional dishes such as Guthuk (a special soup) are prepared, and families gather to enjoy feasts together.</li>
-            <li><strong>Cultural Performances:</strong> Communities gather to witness traditional dances and music, creating a festive atmosphere filled with joy and laughter.</li>
-        </ul>
+    <!-- Festival list -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Signature celebrations</p>
+          <h2>The festivals we keep</h2>
+          <p class="lede">Mustang Kyidug USA organizes and promotes these events every year, keeping the spirit of Mustang alive and thriving among those living abroad.</p>
+        </div>
 
-        <h3>2. Tiji Festival: The Victory of Good Over Evil</h3>
-        <p>The Tiji Festival, also known as the Chasing of the Demons, is another important celebration in Mustang, particularly in Lo Manthang. It is celebrated over three days and symbolizes the victory of good over evil, reflecting the spiritual beliefs of the community.</p>
-        <h4>Rituals and Ceremonies</h4>
-        <ul>
-            <li><strong>Theatrical Performances:</strong> The festival features elaborate masked dances performed by monks, reenacting the story of the demon who was subdued by the deity Dorje Jono.</li>
-            <li><strong>Community Participation:</strong> Villagers actively participate by wearing traditional attire and joining in the celebrations, creating a strong sense of unity and collective joy.</li>
-            <li><strong>Offerings and Prayers:</strong> During Tiji, offerings are made to the deities, and prayers are recited to ensure the well-being of the community and the surrounding environment.</li>
-        </ul>
+        <div class="grid" style="gap:1.4rem">
+          <article class="event reveal">
+            <div class="event__date"><b>01</b><span>Festival</span></div>
+            <div>
+              <h3>Losar — the Tibetan New Year</h3>
+              <p class="event__meta"><span>Feb&ndash;Mar</span><span>&asymp; 2 weeks</span><span>Community-wide</span></p>
+              <p>The most significant festival of the year — a time of renewal, joy, and family reunion. Homes are cleaned and hung with new prayer flags, <b>guthuk</b> soup is shared, monasteries fill with offerings and prayer, and the community gathers for traditional dance and music.</p>
+            </div>
+          </article>
 
-        <h3>3. Chhongu: A Cultural Gathering</h3>
-        <p>The Chhongu Festival is a vibrant community gathering held annually to strengthen the bonds among Mustang people. It is an opportunity for individuals and families to reconnect, share stories, and celebrate their shared heritage.</p>
-        <h4>Activities During Chhongu</h4>
-        <ul>
-            <li><strong>Cultural Performances:</strong> The festival features performances of traditional dances and songs, showcasing the artistic talents of community members.</li>
-            <li><strong>Workshops and Discussions:</strong> Various workshops are held to educate younger generations about Mustang's history, language, and cultural practices.</li>
-            <li><strong>Socializing and Networking:</strong> Chhongu provides a platform for Mustangis to network, meet old friends, and make new connections.</li>
-        </ul>
+          <article class="event reveal">
+            <div class="event__date"><b>02</b><span>Festival</span></div>
+            <div>
+              <h3>Tiji — the chasing of the demons</h3>
+              <p class="event__meta"><span>Spring</span><span>3 days</span><span>Lo Manthang</span></p>
+              <p>Monks in elaborate masks reenact the story of Dorje Jono subduing the demon that threatened Mustang — three days of theatrical dance, offerings, and prayers for the well-being of the community, celebrated in the walled city of Lo Manthang.</p>
+            </div>
+          </article>
 
-        <h3>4. Religious Events and Teachings</h3>
-        <p>In addition to cultural festivals, Mustang Kyidug USA organizes various religious events and teachings led by monks and spiritual leaders from Mustang. These events focus on the spiritual growth of the community and provide opportunities for members to deepen their understanding of Tibetan Buddhism.</p>
-        <h4>Activities Include:</h4>
-        <ul>
-            <li><strong>Buddhist Prayers and Rituals:</strong> Community members participate in prayers, offerings, and meditation sessions, fostering a sense of spiritual connection and peace.</li>
-            <li><strong>Teachings and Discussions:</strong> Monks share teachings on Buddhist philosophy, meditation practices, and the importance of compassion and mindfulness in daily life.</li>
-        </ul>
+          <article class="event reveal">
+            <div class="event__date"><b>03</b><span>Gathering</span></div>
+            <div>
+              <h3>Chhongu — our community gathering</h3>
+              <p class="event__meta"><span>Annual</span><span>New York</span><span>All ages</span></p>
+              <p>The Kyidug&rsquo;s flagship reunion — traditional performances, workshops that teach the young generation Mustang&rsquo;s history and language, and a full day of reconnecting with old friends and making new ones.</p>
+            </div>
+          </article>
 
-        <h3>Community Engagement and Involvement</h3>
-        <p>Mustang Kyidug USA encourages community engagement and involvement in all events. The participation of community members is vital for the success of each celebration, as it strengthens relationships and promotes cultural pride.</p>
-        <h4>Ways to Get Involved</h4>
-        <ul>
-            <li><strong>Volunteering:</strong> Community members can volunteer to help organize events, set up decorations, and assist with food preparation.</li>
-            <li><strong>Participation:</strong> Attending festivals and activities allows individuals to immerse themselves in their culture and connect with fellow Mustangis.</li>
-            <li><strong>Sponsorships and Donations:</strong> Supporting events through financial contributions helps sustain the organization and its activities.</li>
-        </ul>
+          <article class="event reveal">
+            <div class="event__date"><b>04</b><span>Tradition</span></div>
+            <div>
+              <h3>Dhazang &amp; archery tournaments</h3>
+              <p class="event__meta"><span>Annual</span><span>Community sport</span></p>
+              <p>Mustang&rsquo;s beloved archery tradition lives on in the diaspora — friendly tournaments and Dhazang gatherings that mix sport, song, and celebration, just as they have in the villages of Mustang for generations.</p>
+            </div>
+          </article>
 
-        <h3>Conclusion</h3>
-        <p>The festivals and events celebrated by Mustang Kyidug USA play a crucial role in preserving and promoting the unique culture and traditions of the Mustangi people. Through these gatherings, the community fosters a sense of unity and pride, ensuring that the spirit of Mustang continues to thrive for generations to come.</p>
+          <article class="event reveal">
+            <div class="event__date"><b>05</b><span>Spiritual</span></div>
+            <div>
+              <h3>Religious events &amp; teachings</h3>
+              <p class="event__meta"><span>Year-round</span><span>Led by visiting monks</span></p>
+              <p>Prayers, offerings, and meditation sessions led by monks and spiritual leaders from Mustang — plus teachings on Buddhist philosophy, compassion, and mindfulness in daily life.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        © 2025 ShanKyTech | All Rights Reserved
-    </footer>
+    <!-- Quote band -->
+    <section class="quote-band" style="background-image:url('images/mustang20.jpg')">
+      <div class="wrap reveal">
+        <blockquote>
+          &ldquo;A festival is how a community remembers itself — every dance step and every shared meal says: we are still here.&rdquo;
+          <cite>Festivals of Mustang</cite>
+        </blockquote>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Get involved -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Get involved</p>
+          <h2>Every celebration needs many hands</h2>
+          <p class="lede">The participation of community members is vital to every event — it strengthens relationships and builds cultural pride.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="feature reveal" style="--d:0s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </div>
+            <h3>Volunteer</h3>
+            <p>Help organize events, set up decorations, cook and serve — the festivals run on the energy of volunteers like you.</p>
+          </article>
+          <article class="feature reveal" style="--d:0.12s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <h3>Participate</h3>
+            <p>Come to the festivals and activities — immerse yourself in the culture, bring your family, and connect with fellow Mustangis.</p>
+          </article>
+          <article class="feature reveal" style="--d:0.24s">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Sponsor &amp; donate</h3>
+            <p>Financial contributions sustain the organization and its activities — from hall rentals to youth programs and projects back home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal reveal--zoom">
+          <div>
+            <h2>Don&rsquo;t miss the next gathering</h2>
+            <p>Write to us to hear about upcoming festivals, volunteer opportunities, and community news.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Contact the Kyidug
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flag-strip" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgf" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d99a2b"/><stop offset="1" stop-color="#b04a24"/>
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="23" fill="url(#lgf)"/>
+            <circle cx="32" cy="14" r="4.5" fill="#f8f4ec" opacity="0.95"/>
+            <path d="M4 36 L16 19 L22 27 L29 20 L44 36 Z" fill="#221a12" opacity="0.88"/>
+            <rect x="10" y="39" width="28" height="2.6" rx="1.3" fill="#f8f4ec" opacity="0.85"/>
+          </svg>
+          <span>Mustang Kyidug<small>USA &middot; Est. 2003</small></span>
+        </a>
+        <p>Preserving the culture of the Kingdom of Lo and supporting the Mustangi community across the United States since 2003.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="origin.html">History &amp; origin</a></li>
+          <li><a href="people.html">Our community</a></li>
+          <li><a href="culture.html">Culture</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Experience</h4>
+        <ul>
+          <li><a href="events.html">Festivals &amp; events</a></li>
+          <li><a href="tourism.html">Visit Mustang</a></li>
+          <li><a href="gallery.html">Photo &amp; video gallery</a></li>
+          <li><a href="contact.html">Get involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:mustangkyidug@gmail.com">mustangkyidug@gmail.com</a></li>
+          <li>8212 Pettit Avenue<br>New York, NY, United States</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <span>&copy; <span data-year>2026</span> Mustang Kyidug USA. All rights reserved.</span>
+        <span>Site by ShanKyTech</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">&uarr;</button>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
