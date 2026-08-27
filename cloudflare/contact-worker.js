@@ -5,18 +5,21 @@
  *
  * Setup (Cloudflare dashboard):
  *   1. mustangkyidug.com zone → Email → Email Routing → enable it.
- *   2. Email Routing → Destination addresses → add mustangkyidug@gmail.com
- *      and click the verification link Gmail receives.
+ *   2. Email Routing → Destination addresses: shankytech2019@gmail.com must be
+ *      listed and verified (it already is — the routing rules use it).
  *   3. Workers & Pages → Create Worker → name: mustangkyidug-contact →
  *      paste this file → Deploy.
  *   4. Worker → Settings → Bindings → Add → "Send email" →
- *      variable name: CONTACT_EMAIL, destination: mustangkyidug@gmail.com.
+ *      variable name: CONTACT_EMAIL, destination: shankytech2019@gmail.com.
  *   5. Worker → Settings → Domains & Routes → Add route:
  *      mustangkyidug.com/api/contact*  (zone: mustangkyidug.com)
  */
 import { EmailMessage } from "cloudflare:email";
 
-const DEST = "mustangkyidug@gmail.com";
+// Delivery inbox — must be a VERIFIED Email Routing destination address.
+const DEST = "shankytech2019@gmail.com";
+// Public-facing address shown to visitors in error messages.
+const PUBLIC_EMAIL = "contact@mustangkyidug.com";
 const FROM = "forms@mustangkyidug.com";
 
 export default {
@@ -66,7 +69,7 @@ ${message}
       await env.CONTACT_EMAIL.send(new EmailMessage(FROM, DEST, raw));
       return json({ ok: true });
     } catch (err) {
-      return json({ ok: false, error: "Could not send right now — please email " + DEST + " directly." }, 502);
+      return json({ ok: false, error: "Could not send right now — please email " + PUBLIC_EMAIL + " directly." }, 502);
     }
   },
 };

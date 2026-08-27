@@ -176,7 +176,7 @@
       function mailtoFallback() {
         var subject = encodeURIComponent('[' + topic + '] Message from ' + name);
         var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-        window.location.href = 'mailto:mustangkyidug@gmail.com?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:contact@mustangkyidug.com?subject=' + subject + '&body=' + body;
         show('Our contact service seems unreachable, so we opened your email app instead — your message is pre-filled and ready to send.', true);
       }
 
@@ -196,7 +196,7 @@
             show('Thank you, ' + name + '! Your message has been sent — we will get back to you soon.');
             form.reset();
           } else {
-            show((out.data && out.data.error) || 'Something went wrong. Please email mustangkyidug@gmail.com directly.', true);
+            show((out.data && out.data.error) || 'Something went wrong. Please email contact@mustangkyidug.com directly.', true);
           }
         })
         .catch(mailtoFallback)
