@@ -151,7 +151,10 @@
     });
   }
 
-  /* ---------- Contact form ---------- */
+  /* ---------- Contact form ----------
+     Posts to a Cloudflare Worker at /api/contact which relays the message
+     via Email Routing. If the endpoint is unreachable, falls back to
+     opening the visitor's mail app. */
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -160,19 +163,47 @@
       var email = form.querySelector('#email').value.trim();
       var topic = form.querySelector('#topic') ? form.querySelector('#topic').value : 'General';
       var message = form.querySelector('#message').value.trim();
-
-      /* Until a form backend (e.g. Formspree) is connected, open the
-         visitor's mail client pre-filled and addressed to the Kyidug. */
-      var subject = encodeURIComponent('[' + topic + '] Message from ' + name);
-      var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-      window.location.href = 'mailto:mustangkyidug@gmail.com?subject=' + subject + '&body=' + body;
-
+      var honeypot = form.querySelector('#website') ? form.querySelector('#website').value : '';
       var status = document.getElementById('formStatus');
-      if (status) {
-        status.textContent = 'Thank you, ' + name + '! Your email app should open with your message ready to send.';
+      var button = form.querySelector('button[type="submit"]');
+
+      function show(msg, isError) {
+        if (!status) return;
+        status.textContent = msg;
         status.classList.add('is-visible');
+        status.classList.toggle('is-error', !!isError);
       }
-      form.reset();
+      function mailtoFallback() {
+        var subject = encodeURIComponent('[' + topic + '] Message from ' + name);
+        var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+        window.location.href = 'mailto:mustangkyidug@gmail.com?subject=' + subject + '&body=' + body;
+        show('Our contact service seems unreachable, so we opened your email app instead — your message is pre-filled and ready to send.', true);
+      }
+
+      if (!name || !email || !message) { show('Please fill in your name, email and message.', true); return; }
+
+      button.disabled = true;
+      var originalLabel = button.firstChild.textContent;
+      button.firstChild.textContent = 'Sending… ';
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, topic: topic, message: message, website: honeypot })
+      }).then(function (res) { return res.json().then(function (data) { return { ok: res.ok && data.ok, data: data }; }); })
+        .then(function (out) {
+          if (out.ok) {
+            show('Thank you, ' + name + '! Your message has been sent — we will get back to you soon.');
+            form.reset();
+          } else {
+            show((out.data && out.data.error) || 'Something went wrong. Please email mustangkyidug@gmail.com directly.', true);
+          }
+        })
+        .catch(mailtoFallback)
+        .finally(function () {
+          button.disabled = false;
+          button.firstChild.textContent = originalLabel;
+        });
     });
   }
 

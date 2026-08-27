@@ -1185,6 +1185,18 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); backg
   font-size: 0.95rem;
 }
 .form-status.is-visible { display: block; animation: rise 0.5s var(--ease) both; }
+.form-status.is-error {
+  background: rgba(160, 62, 44, 0.1);
+  border-color: rgba(160, 62, 44, 0.4);
+  color: var(--clay, #a03e2c);
+}
+/* Honeypot field: parked far off-screen; bots fill it, people never see it */
+.form-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
 
 .map-frame {
   border-radius: var(--radius);
