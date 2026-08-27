@@ -1221,8 +1221,18 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); backg
   gap: clamp(2rem, 4vw, 3.5rem);
   padding: clamp(3rem, 7vw, 5rem) 0 3rem;
 }
-@media (max-width: 900px) { .site-footer .wrap { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .site-footer .wrap { grid-template-columns: 1fr; } }
+/* Mobile: two columns paired as (brand + Contact) then (Explore + Experience) */
+@media (max-width: 900px) {
+  .site-footer .wrap { grid-template-columns: 1fr 1fr; }
+  .footer-brand { order: 1; }
+  .site-footer .wrap > div:nth-child(4) { order: 2; } /* Contact */
+  .site-footer .wrap > div:nth-child(2) { order: 3; } /* Explore */
+  .site-footer .wrap > div:nth-child(3) { order: 4; } /* Experience */
+}
+@media (max-width: 560px) {
+  .site-footer .wrap { gap: 1.8rem 1.2rem; }
+  .footer-brand p { font-size: 0.84rem; }
+}
 
 .site-footer h4 {
   color: var(--cream);
